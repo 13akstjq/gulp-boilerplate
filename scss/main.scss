@@ -1,7 +1,26 @@
+@import "sprite";
+
 a {
   color: red;
   p {
     color: blue;
     transform: rotate(30deg);
   }
+}
+
+.icon_account {
+  @include sprite($account);
+  vertical-align: top;
+  display: inline-block;
+}
+
+.icon_check_circle {
+  @include sprite($check-circle);
+  vertical-align: top;
+  display: inline-block;
+}
+.icon_delete {
+  @include sprite($delete);
+  vertical-align: top;
+  display: inline-block;
 }

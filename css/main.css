@@ -6,3 +6,27 @@ a {
     -moz-transform: rotate(30deg);
     -ms-transform: rotate(30deg);
     transform: rotate(30deg); }
+
+.icon_account {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  display: inline-block; }
+
+.icon_check_circle {
+  background-image: url(../img/sprite.png);
+  background-position: -18px 0px;
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  display: inline-block; }
+
+.icon_delete {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -18px;
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  display: inline-block; }
