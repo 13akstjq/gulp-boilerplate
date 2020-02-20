@@ -18,7 +18,13 @@
   "homepage": "https://github.com/13akstjq/gulp-boilerplate#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-sass": "^4.0.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "browserslist": [
+    "chrome > 0",
+    "ie > 0",
+    "firefox > 0"
+  ]
 }
