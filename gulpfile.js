@@ -2,6 +2,8 @@ const gulp = require("gulp");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const spritesmith = require("gulp.spritesmith");
+const imagemin = require("gulp-imagemin");
+const buffer = require("vinyl-buffer");
 
 gulp.task("sass", function() {
   return gulp
@@ -25,7 +27,11 @@ gulp.task("sprite", function() {
   );
 
   const imgStream = new Promise(function(resolve) {
-    spriteData.img.pipe(gulp.dest("img/")).on("end", resolve);
+    spriteData.img
+      .pipe(buffer())
+      .pipe(imagemin())
+      .pipe(gulp.dest("img/"))
+      .on("end", resolve);
   });
 
   const cssStream = new Promise(function(resolve) {

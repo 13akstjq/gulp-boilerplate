@@ -19,8 +19,10 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
-    "gulp.spritesmith": "^6.11.0"
+    "gulp.spritesmith": "^6.11.0",
+    "vinyl-buffer": "^1.0.1"
   },
   "dependencies": {},
   "browserslist": [
