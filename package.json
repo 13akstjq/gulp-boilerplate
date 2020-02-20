@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/13akstjq/gulp-boilerplate#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-imagemin": "^7.1.0",

@@ -7,6 +7,9 @@ a {
     -ms-transform: rotate(30deg);
     transform: rotate(30deg); }
 
+.test {
+  color: red; }
+
 .icon_account {
   background-image: url(../img/sprite.png);
   background-position: 0px 0px;

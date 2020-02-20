@@ -8,6 +8,10 @@ a {
   }
 }
 
+.test {
+  color: red;
+}
+
 .icon_account {
   @include sprite($account);
   vertical-align: top;

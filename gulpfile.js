@@ -4,6 +4,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const spritesmith = require("gulp.spritesmith");
 const imagemin = require("gulp-imagemin");
 const buffer = require("vinyl-buffer");
+const browsersync = require("browser-sync");
 
 gulp.task("sass", function() {
   return gulp
@@ -14,7 +15,8 @@ gulp.task("sass", function() {
         cascade: false
       })
     )
-    .pipe(gulp.dest("css/"));
+    .pipe(gulp.dest("css/"))
+    .pipe(browsersync.stream({ match: "**/*.css" }));
 });
 
 gulp.task("sprite", function() {
@@ -40,3 +42,18 @@ gulp.task("sprite", function() {
 
   return Promise.all([imgStream, cssStream]);
 });
+
+gulp.task("browser-sync", function() {
+  browsersync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+});
+
+gulp.task("watch", ["browser-sync"], function() {
+  gulp.watch("scss/*.scss", ["sass"]);
+  gulp.watch("*.html").on("change", browsersync.reload);
+});
+
+gulp.task("default", ["watch"]);
